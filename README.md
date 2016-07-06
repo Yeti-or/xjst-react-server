@@ -1,14 +1,14 @@
-# DDSL Engine for XJST
+# React Server Engine for XJST
 
-> npm i --save-dev xjst-ddsl
+> npm i --save-dev xjst-react-server
 
 ## Usage
 
 ``` js
 'use strict';
 
-const ddsl = require('xjst-ddsl');
-const runtime = new ddsl.Engine();
+const xrs = require('xjst-react-server');
+const runtime = new xrs.Engine();
 
 // LIVE
 runtime.compile(/* templates */);
@@ -17,9 +17,9 @@ runtime.apply(/* bemjson */);
 // BUNDLE
 const fs = require('fs');
 
-fs.writeFileSync('./bundle.ddsl.js', ddsl.generate(/* templates */));
+fs.writeFileSync('./bundle.xrs.js', xrs.generate(/* templates */));
 
-const compiledTemplates = require('./bundle.ddsl.js');
+const compiledTemplates = require('./bundle.xrs.js');
 compiledTemplates.apply(/* bemjson */);
 ```
 
