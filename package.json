@@ -1,0 +1,26 @@
+{
+  "name": "xjst-react-engine",
+  "version": "0.0.1",
+  "description": "xjst engine for react like server rendering",
+  "main": "index.js",
+  "scripts": {
+    "make": "browserify --standalone xjst-react-server lib/xjst-react-server/index.js -o lib/xjst-react-server/bundle.js",
+    "prepublish": "npm run make",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xjst",
+    "templates",
+    "react",
+    "react-server"
+  ],
+  "author": "Vasiliy Loginevskiy <yeti.or@gmail.com>",
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "bem-xjst": "^6.5.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  },
+  "license": "MIT"
+}
